@@ -15,6 +15,5 @@ def app():
     # Add brief describtion of your web app
     st.markdown(
     """<p style="font-size:20px;">
-            Damage to the brain from interruption of its blood supply.
-A stroke is a medical emergency. Symptoms of stroke include trouble walking, speaking and understanding, as well as paralysis or numbness of the face, arm or leg. Early treatment with medication like tPA (clot buster) can minimise brain damage. Other treatments focus on limiting complications and preventing additional strokes.</p>
-    """, unsafe_allow_html=True)
+            What is the main cause of liver disease?
+There are many types of liver disease, which can be caused by infections, inherited conditions, obesity and misuse of alcohol. Over time, liver disease may lead to scarring and more serious complications. Early treatment can help heal the damage and prevent liver failure.""", unsafe_allow_html=True)
