@@ -1,12 +1,12 @@
-# Breast Cancer Predictor
+# Liver Disease Predictor
 
-![home](https://user-images.githubusercontent.com/64016811/200050898-b7e0a3f7-acd9-4075-8e3b-a0f1a8a47af3.png)
-
+![home](https://user-images.githubusercontent.com/64016811/205837390-62c2aa36-e267-4fc8-a877-b68fafeec3c8.jpeg)
 
 
 ### Problem : 
 
-Breast Cancer is a chronic health condition that affects how your heart pumps blood throughout your body. It is not a disease but a phenomena, where there are sudden cardiac arrests. Having healthy, low-cholesterol food, and being active can really help in reducing the chances of cardiac arrest. 
+What is the main cause of liver disease?
+There are many types of liver disease, which can be caused by infections, inherited conditions, obesity and misuse of alcohol. Over time, liver disease may lead to scarring and more serious complications. Early treatment can help heal the damage and prevent liver failure.
 
 ### Solution:
 
@@ -25,7 +25,6 @@ Building an application that can predict the occurrence of a cardiac arrest or t
 |   └─── data.py
 |   └─── predict.py
 |   └─── visualize.py
-|   └─── about.py
 └───__pycache__
 └─── main.py
 └─── web_functions.py
