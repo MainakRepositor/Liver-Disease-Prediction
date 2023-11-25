@@ -5,9 +5,6 @@ import streamlit as st
 
 # Import necessary functions from web_functions
 from web_functions import load_data
-    
-# Import pages
-from Tabs import home, data, predict, visualise
 
 # Configure the app
 st.set_page_config(
@@ -16,6 +13,11 @@ st.set_page_config(
     layout = 'wide',
     initial_sidebar_state = 'auto'
 )
+    
+# Import pages
+from Tabs import home, data, predict, visualise
+
+
 
 # Dictionary for pages
 Tabs = {
