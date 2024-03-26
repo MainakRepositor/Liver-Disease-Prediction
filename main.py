@@ -3,27 +3,6 @@
 # Importing the necessary Python modules.
 import streamlit as st
 
-# Add custom CSS for horizontal navbar
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
-        width: 200px;
-    }
-    .sidebar .radio-box {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .sidebar .radio-box label {
-        margin-right: 20px;
-        font-size: 18px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 
 # Import necessary functions from web_functions
