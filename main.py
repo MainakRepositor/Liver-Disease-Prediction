@@ -3,21 +3,42 @@
 # Importing the necessary Python modules.
 import streamlit as st
 
+# Add custom CSS for horizontal navbar
+st.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content {
+        width: 200px;
+    }
+    .sidebar .radio-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sidebar .radio-box label {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Import necessary functions from web_functions
 from web_functions import load_data
 
 # Configure the app
 st.set_page_config(
-    page_title = 'Liver Disease Detector',
-    page_icon = 'beer',
-    layout = 'wide',
-    initial_sidebar_state = 'auto'
+    page_title='Liver Disease Detector',
+    page_icon='beer',
+    layout='wide',
+    initial_sidebar_state='auto'
 )
-    
+
 # Import pages
 from Tabs import home, data, predict, visualise
-
-
 
 # Dictionary for pages
 Tabs = {
@@ -25,23 +46,22 @@ Tabs = {
     "Data Info": data,
     "Prediction": predict,
     "Visualisation": visualise
-    
 }
 
 # Create a sidebar
-# Add title to sidear
+# Add title to sidebar
 st.sidebar.title("Navigation")
 
-# Create radio option to select the page
-page = st.sidebar.radio("Pages", list(Tabs.keys()))
+# Create horizontal navigation bar
+nav_selection = st.sidebar.radio("Pages", list(Tabs.keys()), index=0)
 
 # Loading the dataset.
 df, X, y = load_data()
 
-# Call the app funciton of selected page to run
-if page in ["Prediction", "Visualisation"]:
-    Tabs[page].app(df, X, y)
-elif (page == "Data Info"):
-    Tabs[page].app(df)
+# Call the app function of selected page to run
+if nav_selection in ["Prediction", "Visualisation"]:
+    Tabs[nav_selection].app(df, X, y)
+elif nav_selection == "Data Info":
+    Tabs[nav_selection].app(df)
 else:
-    Tabs[page].app()
+    Tabs[nav_selection].app()
